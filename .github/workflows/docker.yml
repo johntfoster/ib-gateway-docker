@@ -43,6 +43,6 @@ jobs:
     - uses: actions/checkout@v1
     - uses: antequant/docker-push-action@v0.3
       with:
-        docker_username: antequantsvcuser
-        docker_password: ${{ secrets.DOCKER_TOKEN }}
-        image_path: antequantmirror
+        docker_username: johntfoster
+        docker_password: ${{ secrets.DOCKER_SECRET }}
+        image_path: johntfoster
