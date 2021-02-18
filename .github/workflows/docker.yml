@@ -1,8 +1,11 @@
-name: Docker
+name: Build and push Docker images
 
 on:
   push:
     branches: master
+
+env:
+  VERSION = v0.0.1
 
 jobs:
   multi-registries:

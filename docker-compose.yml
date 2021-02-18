@@ -1,0 +1,8 @@
+services:
+  ib-gateway:
+    image: johntfoster/ib-gateway:latest
+    environment:
+      TWSUSERID: $TWSUSERID
+      TWSPASSWORD: $TWSPASSWORD
+      TRADING_MODE: paper
+    restart: always
