@@ -50,5 +50,5 @@ jobs:
             johntfoster/ib-gateway:0.1.0
             ghcr.io/johntfoster/ib-gateway:latest
             ghcr.io/johntfoster/ib-gateway:0.1.0
-            gcr.io/johntfoster/ib-gateway:latest
-            gcr.io/johntfoster/ib-gateway:0.1.0
+            gcr.io/jpyi-common-unit-hedger/ib-gateway:latest
+            gcr.io/jpyi-common-unit-hedger/ib-gateway:0.1.0
