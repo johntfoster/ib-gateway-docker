@@ -2,7 +2,7 @@ name: Build and push Docker images
 
 on:
   push:
-    branches: master
+    branches: main
 
 jobs:
   multi-registries:
@@ -43,12 +43,12 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
-          platforms: linux/amd64
+          buid-args:
+            VNC_PASSWORD=${{ secrets.VNC_PASSWORD }}
           push: true
           tags: |
-            johntfoster/ib-gateway:latest
-            johntfoster/ib-gateway:0.1.0
-            ghcr.io/johntfoster/ib-gateway:latest
-            ghcr.io/johntfoster/ib-gateway:0.1.0
-            gcr.io/jpyi-common-unit-hedger/ib-gateway:latest
-            gcr.io/jpyi-common-unit-hedger/ib-gateway:0.1.0
+            johntfoster/ib-tws:latest
+            johntfoster/ib-tws:0.1.0
+            ghcr.io/johntfoster/ib-tws:latest
+            ghcr.io/johntfoster/ib-tws:0.1.0
+            gcr.io/jpyi-common-unit-hedger/ib-tws:latest
