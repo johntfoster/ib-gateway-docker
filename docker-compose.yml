@@ -5,4 +5,7 @@ services:
       TWSUSERID: $TWSUSERID
       TWSPASSWORD: $TWSPASSWORD
       TRADING_MODE: paper
+    ports:
+      - 5900:5900
+      - 4002:4002
     restart: always

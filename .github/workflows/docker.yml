@@ -43,7 +43,8 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
-          platforms: linux/amd64
+          build-args:
+            VNC_PASSWORD=${{ secrets.VNC_PASSWORD }}
           push: true
           tags: |
             johntfoster/ib-gateway:latest

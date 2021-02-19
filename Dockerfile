@@ -19,6 +19,8 @@ RUN dos2unix run.sh
 # Application
 FROM ubuntu:latest
 
+ARG VNC_PASSWORD
+
 RUN apt-get update
 RUN apt-get install -y x11vnc xvfb socat
 
@@ -28,7 +30,7 @@ COPY --from=builder /root/install-ibgateway.sh install-ibgateway.sh
 RUN yes "" | ./install-ibgateway.sh
 
 RUN mkdir .vnc
-RUN x11vnc -storepasswd 1358 .vnc/passwd
+RUN x11vnc -storepasswd $VNC_PASSWORD .vnc/passwd
 
 COPY --from=builder /opt/ibc /opt/ibc
 COPY --from=builder /root/run.sh run.sh
@@ -43,4 +45,4 @@ ENV VNC_PORT 5900
 EXPOSE $TWS_PORT
 EXPOSE $VNC_PORT
 
-CMD ./run.sh
+ENTRYPOINT ./run.sh
