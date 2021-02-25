@@ -5,6 +5,7 @@ services:
       TWSUSERID: $TWSUSERID
       TWSPASSWORD: $TWSPASSWORD
       TRADING_MODE: paper
+      TZ: 'America/New_York'
     ports:
       - 5900:5900
       - 4002:4002
